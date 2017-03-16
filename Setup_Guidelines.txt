@@ -1,0 +1,46 @@
+
+Set proxy for CMD:
+set http_proxy=http://donkey.cybersoft.vn:8080
+set https_proxy=http://donkey.cybersoft.vn:8080
+
+Set proxy for NPM:
+npm config set http_proxy=http://donkey.cybersoft.vn:8080
+npm config set https_proxy=http://donkey.cybersoft.vn:8080
+npm config set strict-ssl false
+
+Set proxy for GIT:
+git config --global http.proxy http://donkey.cybersoft.vn:8080
+git config --global https.proxy http://donkey.cybersoft.vn:8080
+git config --global http.sslVerify false
+
+1. Install NodeJS
+www.nodejs.org
+
+2. Install Grunt
+npm install -g grunt-cli
+
+3. Install ruby gem for windows
+https://rubygems.org/pages/download
+
+4. Install Compass with ruby gem
+gem sources -r https://rubygems.org
+gem sources -a http://rubygems.org
+gem install compass
+
+5. Install Bower
+npm install -g bower
+set proxy for .bowerrc
+{
+  "directory": "bower_components",
+  "registry": "http://bower.herokuapp.com",
+  "proxy":"http://donkey.cybersoft.vn:8080",
+  "https-proxy":"http://donkey.cybersoft.vn:8080"
+}
+
+6. 
+grunt build
+grunt serve
+
+7. Log in Grunt
+grunt.log.writeln('=================================================================' + JSON.stringify(availableFiles));
+grunt.log.writeln('=========================' + JSON.stringify(file.dest));
